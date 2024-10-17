@@ -1,34 +1,33 @@
-new Swiper('.card-wrapper', {
-loop :true,
-    spaceBwet: 30,
+const controls = document.querySelectorAll(".control");
+let currentItem = 0;
+const items = document.querySelectorAll(".item");
+const maxItems = items.length;
 
-    // Optional parameters
-    direction: 'vertical',
-    loop: true,
-  
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      dynamicBullets: true,
-    },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  
-    breakpoints: {
-        0: {
-        slidesPerView: 1
-        },
-        768: {
-        slidesPerView: 2
-        },
-        1024: {
-        slidesPerView: 3
-        },
+controls.forEach((control) => {
+  control.addEventListener("click", (e) => {
+    isLeft = e.target.classList.contains("arrow-left");
+
+    if (isLeft) {
+      currentItem -= 1;
+    } else {
+      currentItem += 1;
     }
 
+    if (currentItem >= maxItems) {
+      currentItem = 0;
+    }
+
+    if (currentItem < 0) {
+      currentItem = maxItems - 1;
+    }
+
+    items.forEach((item) => item.classList.remove("current-item"));
+
+    items[currentItem].scrollIntoView({
+      behavior: "smooth",
+      inline: "center"
+    });
+
+    items[currentItem].classList.add("current-item");
   });
+});

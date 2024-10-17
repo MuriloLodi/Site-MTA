@@ -186,10 +186,13 @@ section.portfolio .flex {
 /* CARROSSEL*/
 section.carrossel{
   padding: 80px 4%;
+  position: relative;
 }
 
 section.carrossel .flex {
   gap: 60px;
+  overflow-x: auto ;
+
 }
 .list .item{
 
@@ -227,7 +230,6 @@ section.carrossel .flex {
   border: 3px solid #FFC000;
   flex: 1;
   margin: 20px;
-
 }
 
 .list img{
@@ -236,7 +238,6 @@ section.carrossel .flex {
   border-radius: 10px ;
   padding: 15px;
 }
-
 
 
 .list .item p{
@@ -266,7 +267,7 @@ section.carrossel .flex {
   transition: .2s;
 }
 
-button:hover{
+.item button:hover{
     box-shadow: 0px 0px 8px #610054;
     transform: scale(1.05);
 }
@@ -274,7 +275,55 @@ button:hover{
 .item-info {
   display: flex;
   justify-content: space-between; /* Espaça título e preço */
+  
+}
 
+.arrow-right,
+.arrow-left{
+  position: absolute;
+  top: 100px;
+  left: 200px;
+  right: auto;
+  bottom: 0;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(to right, transparent 0, #191919 200%);
+  opacity: 0.1;
+  transition: all 600ms ease-in-out;
+  z-index: 1;
+}
+.arrow-right{
+    left: auto;
+    right: 200px;
+    background: linear-gradient(to left, transparent 0, #191919 200%);
+}
+.arrow-right:hover,
+.arrow-left:hover{
+  opacity: 1;
+}
+
+.item{
+  opacity: 0.4;
+  transition: all 600ms ease-in-out;
+}
+
+.item.um{
+  opacity: 1;
+
+}
+
+/*Chrome, Safari and Opera */
+section.carrossel ::-webkit-scrollbar {
+  display: none;
+}
+
+/*IE, Edge and Firefox */
+section.carrossel {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 
