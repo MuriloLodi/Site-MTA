@@ -9,40 +9,27 @@ body {
   background-color: #191919;
   height: 100vh;
 }
+.swiper-wrapper{
+  max-width: 1100px;
+  margin: 0 60px 35px;
+  padding: 20px 10px;
+  overflow: hidden; 
+}
 
 .interface {
-  max-width: 1600px;
-  margin: 0 auto;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 .flex {
   display: flex;
 }
 
-.bnt-contato {
-  padding: 0px 4% 0px;
-  font-size: 18px;
-  font-weight: 600;
-  border: 0;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: .2s;
-}
 
 h2.title {
   color: white;
   font-size: 38px;
   text-align: center;
-
-}
-
-h2.title span {
-  color: #ff0000;
-}
-
-button:hover {
-  box-shadow: 0px 0px 8px #ff0000;
-  transform: scale(1.05);
 }
 
 /* Estilo Cabe */
@@ -51,7 +38,7 @@ header {
   background-color: #000;
 }
 
-header>.interface {
+header .interface {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -103,21 +90,13 @@ section.topo-do-site .flex {
   line-height: 40px;
 }
 
-.topo-do-site .txt-topo-site h1 span {
-  color: #ff0000;
-  font-size: 50px;
-}
-
 .topo-do-site .txt-topo-site p {
   color: #fff;
   margin: 40px 0;
 }
 
 .img {
-  display: block;
-  margin: 0 auto;
-  object-fit: fill;
-
+  align-items: center;
 }
 
 .img2 {
@@ -130,124 +109,40 @@ section.topo-do-site .flex {
   color: #fff;
   transform: scale(1.25);
 }
-@keyframes flutuar {
-  0% {
-    top: 0;
-  }
-
-  100% {
-    top: 30px;
-  }
-}
-
-/* ESTILO DAS ESPECIALIDADES*/
-section.especialidades {
-  padding: 40px 4%;
-}
-
-section.especialidades .flex {
-  gap: 60px;
-}
-
-.especialidades .especialidades-box {
-  color: white;
-  padding: 40px;
-  margin-top: 45px;
-  border-radius: 20px;
-  transition: .2s;
-}
-
-.especialidades .especialidades-box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #ffffff78;
-}
-
-.especialidades .especialidades-box i {
-  font-size: 70px;
-  color: #ff0000;
-}
-
-.especialidades .especialidades-box h3 {
-  font-size: 28px;
-  margin: 15px 0;
-}
 
 /* ESTILO DO SOBRE */
 
-section.sobre {
-  padding: 80px 4%;
-}
 
-section.sobre .flex {
-  align-items: center;
-  gap: 60px;
-}
-
-.sobre .txt-sobre {
-  color: white;
-}
-
-.sobre .txt-sobre h2 {
-  font-size: 40px;
-  line-height: 40px;
-  margin-bottom: 30px;
-}
-
-
-.sobre .txt-sobre h2 span {
-  color: #ff0000;
-  display: block;
-}
-
-.sobre .txt-sobre p {
-  margin: 20px 0;
-  text-align: justify;
-}
-
-.sobre .txt-sobre .bnt-social button {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: none;
-  background-color: #ff0000;
-  font-size: 22px;
-  cursor: pointer;
-  margin: 0 10px;
-  transition: .2s;
-}
-
-.sobre .img-sobre img {
-  width: 400px;
-  height: 540px;
-  border-radius: 5%;
-}
 
 /* ESTILO DO PORTFÓLIO */
 
 section.portfolio {
-  padding: 80px 4%;
-  box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.089);
+  padding: 40px 4%;
 }
 
 section.portfolio .flex {
   justify-content: space-around;
   margin-top: 60px;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.portfolio h3 {
+  text-align: center;
 }
 
 .img-port {
-  width: 360px;
-  height: 460px;
-  background-size: cover;
-  background-position: 100% 0%;
-  transition: 5s;
+  color: #fff;
+  background-color: #FFC000;
+  padding: 20px 70px;
   cursor: pointer;
   border-radius: 40px;
+  transition: .7s;
+  background-size: cover;
+  background-position: 100% 0%;
   position: relative;
 }
 
-.img-port:hover {
-  background-position: 100% 100%;
-}
 
 .overlay {
   position: absolute;
@@ -255,18 +150,131 @@ section.portfolio .flex {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #000000b8;
+  background-color: #000000;
   border-radius: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 16px;
   color: #fff;
   opacity: 0;
-  transition: .5s;
+  transition: .7s;
+  text-align: center;
+}
+
+.overlay.item2 {
+  padding: 10px 4%;
+  font-size: 13px;
+}
+
+.overlay.item3 {
+  padding: 10px 4%;
+  font-size: 14px;
+}
+
+.overlay a {
+  color: #4C7EBE;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .overlay:hover {
   opacity: 1;
 }
+
+
+/* CARROSSEL*/
+section.carrossel{
+  padding: 80px 4%;
+}
+
+section.carrossel .flex {
+  gap: 60px;
+}
+.list .item{
+
+  transition: .2s;
+}
+.list {
+  cursor: pointer;
+  transition: .2s;
+  border-radius: 35px;
+  justify-content: space-around;
+  display: flex;
+  list-style: none;
+}
+
+.list .item:hover{
+  box-shadow: 0px 0px 8px #FFC000;
+  transform: scale(1.05);
+}
+.carrossel h2{
+  padding: 50px 0;
+  color: #fff;
+  font-size: 38px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.item {
+  user-select: none;
+  background-image: linear-gradient( #8a6801 ,#886600);
+  padding: 18px;
+  border-radius:35px;
+  text-decoration: none;
+  list-style: none;
+  justify-content: center;
+  border: 3px solid #FFC000;
+  flex: 1;
+  margin: 20px;
+
+}
+
+.list img{
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px ;
+  padding: 15px;
+}
+
+
+
+.list .item p{
+  color: white;
+  background-image: linear-gradient( #a87f01,#886600);
+  border: 3px solid #FFC000;
+  padding: 8px 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 50px;
+  text-align: center;
+  width: 130px;
+  height: 44px;
+}
+
+
+.vendidos button{
+  color: white;
+  background-image: linear-gradient(#83008a,#360021);
+  height: 60px;
+  width: 350px;
+  font-weight: 600;
+  font-size: 23px;
+  border-radius: 30px;
+  border: #610054 solid 3px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+button:hover{
+    box-shadow: 0px 0px 8px #610054;
+    transform: scale(1.05);
+}
+
+.item-info {
+  display: flex;
+  justify-content: space-between; /* Espaça título e preço */
+
+}
+
+
