@@ -1,3 +1,4 @@
+/*ESTILO GERAL*/
 * {
   margin: 0;
   padding: 0;
@@ -9,12 +10,6 @@ body {
   background-color: #191919;
   height: 100vh;
 }
-.swiper-wrapper{
-  max-width: 1100px;
-  margin: 0 60px 35px;
-  padding: 20px 10px;
-  overflow: hidden; 
-}
 
 .interface {
     max-width: 1280px;
@@ -25,14 +20,14 @@ body {
   display: flex;
 }
 
-
 h2.title {
   color: white;
   font-size: 38px;
   text-align: center;
 }
 
-/* Estilo Cabe */
+/* ESTILO CABEÇALHO */
+
 header {
   padding: 0px 4%;
   background-color: #000;
@@ -67,7 +62,6 @@ header nav ul li {
   padding: 0 25px;
 }
 
-
 header .logo {
   height: auto;
 }
@@ -95,7 +89,7 @@ section.topo-do-site .flex {
   margin: 40px 0;
 }
 
-.img {
+.img1 {
   align-items: center;
 }
 
@@ -110,24 +104,20 @@ section.topo-do-site .flex {
   transform: scale(1.25);
 }
 
-/* ESTILO DO SOBRE */
+/* ESTILO DO PROJETOS */
 
-
-
-/* ESTILO DO PORTFÓLIO */
-
-section.portfolio {
+section.projetos {
   padding: 40px 4%;
 }
 
-section.portfolio .flex {
+section.projetos .flex {
   justify-content: space-around;
   margin-top: 60px;
   flex-direction: column;
   gap: 30px;
 }
 
-.portfolio h3 {
+.projetos h3 {
   text-align: center;
 }
 
@@ -142,7 +132,6 @@ section.portfolio .flex {
   background-position: 100% 0%;
   position: relative;
 }
-
 
 .overlay {
   position: absolute;
@@ -182,65 +171,68 @@ section.portfolio .flex {
   opacity: 1;
 }
 
+/* ESTILO CARROSSEL*/
 
-/* CARROSSEL*/
-section.carrossel{
+.swiper {
+  width: 1500px;
+  height: auto;
+}
+
+.swiper{
+  text-align: center;
+  padding: 40px 4%;
+
+}
+
+.swiper-slide{
+  background-image: linear-gradient( #8a6801 ,#886600);
+  max-width: 415px;
+  max-height: auto;
   padding: 80px 4%;
-  position: relative;
-}
-
-section.carrossel .flex {
-  gap: 60px;
-  overflow-x: auto ;
-
-}
-.list .item{
-
-  transition: .2s;
-}
-.list {
   cursor: pointer;
   transition: .2s;
   border-radius: 35px;
-  justify-content: space-around;
-  display: flex;
   list-style: none;
-}
+  padding: 5px 10px 16px 10px;
+  border: 3px solid #FFC000;
 
-.list .item:hover{
+}
+.swiper-slide:hover{
   box-shadow: 0px 0px 8px #FFC000;
   transform: scale(1.05);
 }
-.carrossel h2{
-  padding: 50px 0;
-  color: #fff;
-  font-size: 38px;
-  line-height: 40px;
-  text-align: center;
+.swiper-slide h3{
+  color: white;
+  text-align: justify;
+  font-size: 18px;
+  padding: 2px 10px 3% 5%;
 }
 
-.item {
-  user-select: none;
-  background-image: linear-gradient( #8a6801 ,#886600);
-  padding: 18px;
-  border-radius:35px;
-  text-decoration: none;
-  list-style: none;
-  justify-content: center;
-  border: 3px solid #FFC000;
-  flex: 1;
-  margin: 20px;
-}
-
-.list img{
+.swiper img{
   width: 100%;
-  object-fit: cover;
   border-radius: 10px ;
   padding: 15px;
 }
 
+.swiper button{
+  color: white;
+  text-align: center;
+  background-image: linear-gradient(#83008a,#360021);
+  border: #610054 solid 3px;
+  cursor: pointer;
+  transition: .2s;
+  border-radius: 30px;
+  font-size: 22px;
+  font-weight: 600;
+  padding: 10px 16px 10px 16px;
+}
 
-.list .item p{
+.swiper button:hover{
+  box-shadow: 0px 0px 8px #610054;
+  transform: scale(1.05);
+}
+
+.swiper p{
   color: white;
   background-image: linear-gradient( #a87f01,#886600);
   border: 3px solid #FFC000;
@@ -251,79 +243,32 @@ section.carrossel .flex {
   text-align: center;
   width: 130px;
   height: 44px;
-}
-
-
-.vendidos button{
-  color: white;
-  background-image: linear-gradient(#83008a,#360021);
-  height: 60px;
-  width: 350px;
-  font-weight: 600;
-  font-size: 23px;
-  border-radius: 30px;
-  border: #610054 solid 3px;
-  cursor: pointer;
-  transition: .2s;
-}
-
-.item button:hover{
-    box-shadow: 0px 0px 8px #610054;
-    transform: scale(1.05);
-}
-
-.item-info {
-  display: flex;
-  justify-content: space-between; /* Espaça título e preço */
   
 }
 
-.arrow-right,
-.arrow-left{
-  position: absolute;
-  top: 100px;
-  left: 200px;
-  right: auto;
-  bottom: 0;
-  font-size: 20px;
-  text-align: center;
-  color: #fff;
-  cursor: pointer;
-  border: none;
-  background: linear-gradient(to right, transparent 0, #191919 200%);
-  opacity: 0.1;
-  transition: all 600ms ease-in-out;
-  z-index: 1;
-}
-.arrow-right{
-    left: auto;
-    right: 200px;
-    background: linear-gradient(to left, transparent 0, #191919 200%);
-}
-.arrow-right:hover,
-.arrow-left:hover{
-  opacity: 1;
+
+.swiper .swiper-pagination-bullet{
+  background-image: linear-gradient( #a87f01,#886600);
+  height: 15px;
+  width: 15px;
+  
 }
 
-.item{
-  opacity: 0.4;
-  transition: all 600ms ease-in-out;
+.swiper .swiper-pagination-bullet-active{
+  border: 1px solid #FFC000;
 }
 
-.item.um{
-  opacity: 1;
-
+.swiper .lado{
+  display: flex;
 }
 
-/*Chrome, Safari and Opera */
-section.carrossel ::-webkit-scrollbar {
-  display: none;
+.price{
+margin: 0 auto;
+}
+.item-title{
+  left: 0;
 }
 
-/*IE, Edge and Firefox */
-section.carrossel {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+.swiper .title{
+  padding: 40px;
 }
-
-
