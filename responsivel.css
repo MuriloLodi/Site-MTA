@@ -1,0 +1,61 @@
+@media screen and (max-width:1140px) {
+
+    .cart,
+    header .desk-top,
+    header .bnt-contato {
+        display: none;
+    }
+
+
+}
+
+@media screen and (max-width:900px) {
+
+    h2.title {
+        font-size: 34px;
+        line-height: 30px;
+    }
+
+    section.logog .flex {
+        gap: 10px;
+        flex-direction: column-reverse;
+    }
+
+
+    .logog .img2 {
+        width: 100%;
+    }
+
+    /* ESTILO DAS ESPECIALIDADES*/
+    section.projetos {
+        padding: 40px 8%;
+    }
+    
+    section.projetos .flex {
+        gap: 40px;
+        flex-direction: column;
+    }
+    
+    .projetos .img-port {
+        padding: 40px;
+        margin-top: 45px;
+    }
+    
+    .projetos .img-port h3 {
+        font-size: 20px;
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .overlay.item1{
+        font-size: 15px;
+        padding: 10px 10px;
+    }
+
+    .overlay.item2{
+        font-size: 12px;
+        text-align: center;
+    }
+
+    
+}

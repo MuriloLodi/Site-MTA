@@ -174,7 +174,7 @@ section.projetos .flex {
 /* ESTILO CARROSSEL*/
 
 .swiper {
-  width: 1500px;
+  width: 1280px;
   height: auto;
 }
 
@@ -197,6 +197,7 @@ section.projetos .flex {
   border: 3px solid #FFC000;
 
 }
+
 .swiper-slide:hover{
   box-shadow: 0px 0px 8px #FFC000;
   transform: scale(1.05);
@@ -271,4 +272,45 @@ margin: 0 auto;
 
 .swiper .title{
   padding: 40px;
+}
+
+
+/* FOOTER */
+
+footer{
+  padding: 60px 4%;
+}
+
+footer .flex{
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .line-footer{
+  padding: 20px 0;
+}
+
+.borda{
+  border-top: 2px solid #FFC000;
+}
+
+.social button{
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: #FFC000;
+  font-size: 22px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: .2s;
+}
+
+footer .line-footer p i{
+  color: #FFC000;
+  font-size: 22px;
+}
+
+footer .line-footer p a {
+  color: white;
 }
