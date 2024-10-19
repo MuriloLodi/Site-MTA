@@ -8,7 +8,7 @@
 
 body {
   background-color: #191919;
-  height: 100vh;
+  height: 100dvh;
 }
 
 .interface {
@@ -33,13 +33,13 @@ header {
   background-color: #000;
 }
 
-header .interface {
+header  .interface {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-header a {
+header .desk-top a {
   color: #ffffff;
   text-decoration: none;
   display: inline-block;
@@ -48,16 +48,16 @@ header a {
   font-size: 20px;
 }
 
-header a:hover {
+header nav.desk-top a:hover {
   color: #fff;
   transform: scale(1.05);
 }
 
-header nav ul {
+header nav.desk-top ul {
   list-style-type: none;
 }
 
-header nav ul li {
+header nav.desk-top ul li {
   display: inline-block;
   padding: 0 25px;
 }
@@ -65,6 +65,134 @@ header nav ul li {
 header .logo {
   height: auto;
 }
+
+/*ESTILO MENU MOBILE*/
+.sumir{
+  display: none;
+}
+
+.mob {
+  display: flex;
+  justify-content: space-between; /* Alinha os itens nas extremidades */
+  align-items: center; /* Centraliza verticalmente os itens */
+  padding: 10px; /* Adicione um espaçamento, se necessário */
+}
+
+
+.mob i{
+  color: white;
+  font-size: 35px;
+}
+
+.fecharcart{
+
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+
+}
+.fechar1{
+  margin-right: auto; /* Empurra o ícone para a esquerda */
+}
+
+.fecharcart .fechar1 i{
+  color: white;
+  font-size: 30px ;
+}
+
+.fecharcart .fechar1{
+  padding: 20px 5%;
+  text-align: left;
+}
+
+.fecharcart a{
+  text-align: center;
+  display: block;
+  padding: 20px;
+}
+
+.fecharcart button{
+  color: white;
+  text-align: center;
+  background-image: linear-gradient( #8a6801 ,#886600);
+  border: #FFC000 solid 3px;
+  cursor: pointer;
+  transition: .3s;
+  border-radius: 30px;
+  font-size: 22px;
+  font-weight: 500;
+  padding: 10px 5%;
+}
+
+.fecharcart button:hover{
+  box-shadow: 0px 0px 8px #FFC000;
+  transform: scale(1.05);
+}
+
+
+.menu-cell{
+  background-color: rgb(0, 0, 0);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  width: 0%;
+  overflow: hidden;
+}
+
+.menu-cell.menuok{
+  width: 70%;
+}
+
+
+.menu-cell.menuok ~ .overlay-menu-cell{
+  display: block;
+}
+
+.menu-cell .fechar{
+  padding: 20px 5%;
+  text-align: right;
+}
+.menu-cell .fechar i{
+  color: white;
+  font-size: 30px ;
+}
+.menu-cell nav ul{
+  text-align: left;
+
+}
+.menu-cell nav ul li a{
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 20px 8%;
+  display: block;
+  text-decoration: none;
+}
+
+.menu-cell nav ul li a:hover{
+  color: black;
+  background-color: #FFC000;
+}
+
+
+.overlay-menu-cell{
+  background-color: #00000096;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 88888;
+  display: none;
+}
+
 
 /* TOPO SITE */
 
@@ -91,12 +219,13 @@ section.topo-do-site .flex {
 
 .img1 {
   align-items: center;
+
 }
 
 .img2 {
-  display: block;
   margin: 100px auto;
   transition: .9s;
+  align-items: center;
 }
 
 .img2:hover {
@@ -176,6 +305,7 @@ section.projetos .flex {
 .swiper {
   width: 1280px;
   height: auto;
+  overflow :hidden
 }
 
 .swiper{
@@ -237,13 +367,13 @@ section.projetos .flex {
   color: white;
   background-image: linear-gradient( #a87f01,#886600);
   border: 3px solid #FFC000;
-  padding: 8px 8px;
-  font-size: 0.95rem;
-  font-weight: 500;
+  font-size: 13px;
+  font-weight: 600;
   border-radius: 50px;
   text-align: center;
   width: 130px;
   height: 44px;
+padding: 10px;
   
 }
 
@@ -313,4 +443,10 @@ footer .line-footer p i{
 
 footer .line-footer p a {
   color: white;
+}
+
+
+.img1 img{
+  width: 100%;
+  height: auto;
 }

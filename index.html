@@ -51,7 +51,51 @@
         </a>
       </div>
     </div> <!--fim interface-->
+
+
+    <div class="sumir">
+      <div class="mob">
+        <div class="abrirmob" id="btn-menu">
+          <i class="bi bi-list"></i>
+        </div>
+        <a href="#">
+          <img src="img/logo.png" alt="">
+        </a>
+        <i class="bi bi-cart"></i>
+      </div>
+
+      <div class="fecharcart">
+        <div class="fechar1">
+          <i class="bi bi-x-lg"></i>
+        </div>
+        <a href="index.html"><button>Pagina Principal</button> </a>
+      </div>
+
+      <div class="menu-cell" id="menu-mobile">
+        <div class="fechar" id="fechar">
+          <i class="bi bi-x-lg"></i>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">INÍCIO</a></li>
+            <li><a href="planosvip.html">💳 PLANOS VIP</a></li>
+            <li><a href="money.html">💸 MONEY</a></li>
+            <li><a href="punicoes.html">🚫 PUNIÇÕES</a></li>
+            <li><a href="veiculos.html">🚗VEÍCULOS</a></li>
+          </ul>
+        </nav>
+
+      </div>
+
+      <div class="overlay-menu-cell" id="ov">
+
+      </div>
+
+
   </header> <!--Menu Topo-->
+
+
+
 
 
   <main>
@@ -59,7 +103,7 @@
       <div class="interface">
         <div class="flex">
           <div class="img1">
-            <img src="img/logodc-1-7.png" width="1900" height="397" alt="">
+            <img src="img/logodc-1-7.png" alt="">
           </div>
         </div>
       </div><!--interface-->
@@ -202,8 +246,28 @@
           prevEl: '.swiper-button-prev',
         },
 
+
       });
 
+    </script>
+
+    <script>
+      let btnMenu = document.getElementById('btn-menu')
+      let menu = document.getElementById('menu-mobile')
+      let overlay = document.getElementById('overlay-menu')
+
+
+      btnMenu.addEventListener('click', () => {
+        menu.classList.add('menuok')
+      })
+
+      menu.addEventListener('click', () => {
+        menu.classList.remove('abrir-menu')
+      })
+
+      overlay.addEventListener('click', () => {
+        menu.classList.remove('abrir-menu')
+      })
     </script>
 </body>
 

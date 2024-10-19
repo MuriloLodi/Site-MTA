@@ -1,9 +1,20 @@
-@media screen and (max-width:1140px) {
+@media screen and (max-width:1300px) {
+    .swiper {
+        width: 100%;
+    }
+    
+}
 
+@media screen and (max-width:1140px) {
+    .logo,
     .cart,
     header .desk-top,
     header .bnt-contato {
         display: none;
+    }
+    .sumir{
+        display: block;
+    
     }
 
 
@@ -19,11 +30,6 @@
     section.logog .flex {
         gap: 10px;
         flex-direction: column-reverse;
-    }
-
-
-    .logog .img2 {
-        width: 100%;
     }
 
     /* ESTILO DAS ESPECIALIDADES*/
@@ -59,3 +65,4 @@
 
     
 }
+
