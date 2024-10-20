@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="responsivel.css">
   <title>NOVA JARSEY RP</title>
-  <script src="script.js"></script>
+
 </head>
 
 <body>
@@ -55,16 +55,18 @@
 
     <div class="sumir">
       <div class="mob">
-        <div class="abrirmob" id="btn-menu">
+        <div class="abrirmob" id="abrirmenu">
           <i class="bi bi-list"></i>
         </div>
         <a href="#">
           <img src="img/logo.png" alt="">
         </a>
-        <i class="bi bi-cart"></i>
+        <div id="abrircart">
+          <i class="bi bi-cart"></i>
+        </div>
       </div>
 
-      <div class="fecharcart">
+      <div class="fecharcart" id="menucart">
         <div class="fechar1">
           <i class="bi bi-x-lg"></i>
         </div>
@@ -72,7 +74,7 @@
       </div>
 
       <div class="menu-cell" id="menu-mobile">
-        <div class="fechar" id="fechar">
+        <div class="fechar">
           <i class="bi bi-x-lg"></i>
         </div>
         <nav>
@@ -100,13 +102,9 @@
 
   <main>
     <section class="topo-do-site">
-      <div class="interface">
-        <div class="flex">
-          <div class="img1">
-            <img src="img/logodc-1-7.png" alt="">
-          </div>
-        </div>
-      </div><!--interface-->
+      <div class="img1">
+        <img src="img/logodc-1-7.png" alt="">
+      </div>
     </section><!--Logo Grande-->
 
 
@@ -149,7 +147,7 @@
       </div><!--interface-->
     </section><!--projetos-->
 
-    <div class="swiper">
+    <div class="swiper desk-top">
       <h2 class="title">MAIS VENDIDOS</h2>
       <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -223,6 +221,7 @@
       </div>
     </footer>
 
+    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper('.swiper', {
@@ -249,26 +248,9 @@
 
       });
 
+
     </script>
 
-    <script>
-      let btnMenu = document.getElementById('btn-menu')
-      let menu = document.getElementById('menu-mobile')
-      let overlay = document.getElementById('overlay-menu')
-
-
-      btnMenu.addEventListener('click', () => {
-        menu.classList.add('menuok')
-      })
-
-      menu.addEventListener('click', () => {
-        menu.classList.remove('abrir-menu')
-      })
-
-      overlay.addEventListener('click', () => {
-        menu.classList.remove('abrir-menu')
-      })
-    </script>
 </body>
 
 </html>

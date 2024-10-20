@@ -146,12 +146,18 @@ header .logo {
   overflow: hidden;
 }
 
-.menu-cell.menuok{
+.menu-cell.abrir-menu{
+  width: 70%;
+}
+.fecharcart.abrir-menu2{
   width: 70%;
 }
 
 
-.menu-cell.menuok ~ .overlay-menu-cell{
+.menu-cell.abrir-menu ~ .overlay-menu-cell{
+  display: block;
+}
+.fecharcart.abrir-menu2 ~ .overlay-menu-cell{
   display: block;
 }
 
@@ -195,27 +201,6 @@ header .logo {
 
 
 /* TOPO SITE */
-
-section.topo-do-site {
-  padding: 0px 4%;
-}
-
-section.topo-do-site .flex {
-  align-items: center;
-  justify-content: center;
-  gap: 90px;
-}
-
-.topo-do-site h1 {
-  color: #fff;
-  font-size: 38px;
-  line-height: 40px;
-}
-
-.topo-do-site .txt-topo-site p {
-  color: #fff;
-  margin: 40px 0;
-}
 
 .img1 {
   align-items: center;
@@ -447,6 +432,6 @@ footer .line-footer p a {
 
 
 .img1 img{
-  width: 100%;
-  height: auto;
+  width: 100%;;
+
 }
