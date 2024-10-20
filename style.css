@@ -94,6 +94,7 @@ header .logo {
     z-index: 99999;
     width: 0%;
     overflow: hidden;
+    transition: .4s;
 
 }
 .fechar1{
@@ -144,6 +145,7 @@ header .logo {
   z-index: 99999;
   width: 0%;
   overflow: hidden;
+  transition: .4s;
 }
 
 .menu-cell.abrir-menu{
@@ -204,13 +206,13 @@ header .logo {
 
 .img1 {
   align-items: center;
-
 }
 
 .img2 {
   margin: 100px auto;
   transition: .9s;
   align-items: center;
+  
 }
 
 .img2:hover {
@@ -435,3 +437,100 @@ footer .line-footer p a {
   width: 100%;;
 
 }
+
+
+
+
+/*vendas*/
+
+.itens .lado{
+  display: flex;
+}
+
+.itens .price{
+margin: 0 auto;
+}
+.itens .item-title{
+  left: 0;
+}
+
+.vendas .flex{
+  justify-content: space-around;
+}
+.vendas {
+  width: 100%;
+  height: auto;
+  overflow :hidden;
+  
+}
+
+.vendas{
+  text-align: center;
+  padding: 40px 4%;
+
+}
+
+.itens{
+  background-image: linear-gradient( #8a6801 ,#886600);
+  max-width: 300px;
+  max-height: auto;
+  padding: 80px 4%;
+  cursor: pointer;
+  transition: .2s;
+  border-radius: 35px;
+  list-style: none;
+  padding: 5px 10px 16px 10px;
+  border: 3px solid #FFC000;
+  
+
+}
+
+.itens:hover{
+  box-shadow: 0px 0px 8px #FFC000;
+  transform: scale(1.05);
+}
+.itens h3{
+  color: white;
+  text-align: justify;
+  font-size: 18px;
+  padding: 2px 10px 3% 5%;
+}
+
+.itens img{
+  width: 100%;
+  border-radius: 10px ;
+  padding: 15px;
+}
+
+.itens button{
+  color: white;
+  text-align: center;
+  background-image: linear-gradient(#83008a,#360021);
+  border: #610054 solid 3px;
+  cursor: pointer;
+  transition: .2s;
+  border-radius: 30px;
+  font-size: 22px;
+  font-weight: 600;
+  padding: 10px 16px 10px 16px;
+}
+
+.itens button:hover{
+  box-shadow: 0px 0px 8px #610054;
+  transform: scale(1.05);
+}
+
+.itens p{
+  color: white;
+  background-image: linear-gradient( #a87f01,#886600);
+  border: 3px solid #FFC000;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 50px;
+  text-align: center;
+  width: 130px;
+  height: 44px;
+padding: 10px;
+  
+}
+
