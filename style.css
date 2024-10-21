@@ -456,6 +456,8 @@ margin: 0 auto;
 
 .vendas .flex{
   justify-content: space-around;
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+  gap: 25px;
 }
 .vendas {
   width: 100%;
@@ -467,6 +469,7 @@ margin: 0 auto;
 .vendas{
   text-align: center;
   padding: 40px 4%;
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
 
 }
 
@@ -481,6 +484,7 @@ margin: 0 auto;
   list-style: none;
   padding: 5px 10px 16px 10px;
   border: 3px solid #FFC000;
+  
   
 
 }
