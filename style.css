@@ -85,7 +85,6 @@ header .logo {
 }
 
 .fecharcart{
-
     background-color: rgb(0, 0, 0);
     height: 100vh;
     position: fixed;
@@ -117,7 +116,7 @@ header .logo {
   padding: 20px;
 }
 
-.fecharcart button{
+.finalizar {
   color: white;
   text-align: center;
   background-image: linear-gradient( #8a6801 ,#886600);
@@ -130,7 +129,18 @@ header .logo {
   padding: 10px 5%;
 }
 
-.fecharcart button:hover{
+.remove-from-cart-btn{
+  width: 60%;
+  height: 50px;
+  margin-top: 25px;
+  background-image: linear-gradient( #8a6801 ,#886600);
+  border: #FFC000 solid 3px;
+  color: white;
+  font-size: 22px;
+  border-radius: 30px;
+}
+
+.finalizartbutton:hover{
   box-shadow: 0px 0px 8px #FFC000;
   transform: scale(1.05);
 }
@@ -154,12 +164,18 @@ header .logo {
 .fecharcart.abrir-menu2{
   width: 70%;
 }
+.fecharcart.abrir-menu3{
+  width: 70%;
+}
 
 
 .menu-cell.abrir-menu ~ .overlay-menu-cell{
   display: block;
 }
 .fecharcart.abrir-menu2 ~ .overlay-menu-cell{
+  display: block;
+}
+.fecharcart.abrir-menu3 ~ .overlay-menu-cell{
   display: block;
 }
 
@@ -538,3 +554,33 @@ padding: 10px;
   
 }
 
+
+.dentrocart{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  flex-direction: column;
+  max-height: 400px;
+  overflow: auto;
+  color: white;
+}
+
+
+.bold {
+  color: white;
+  text-align: center;
+}
+
+.finalizar{
+
+  margin-left: 40%;
+  margin-right: 40%;
+}
+
+.dentrocart{
+  align-items: center;
+}
+
+.remove-from-cart-btn button{
+  width: 30px;
+}

@@ -29,7 +29,7 @@
     <header>
         <div class="interface"><!--interface-->
             <div class="logo">
-                <a href="#">
+                <a href="index.html">
                     <img src="img/logo.png" width="151" height="95" alt="">
                 </a>
             </div>
@@ -43,10 +43,24 @@
                 </ul>
             </nav>
             <div class="cart">
-                <a href="#">
-                    <img src="img/cart.png" alt="Carrinho">
-                </a>
+                <div class="mob">
+                    <div id="cart-btn">
+                        <i class="bi bi-cart"></i>
+                    </div>
+                </div>
             </div>
+            <div class="fecharcart" id="cart-modal">
+                <div class="fechar1">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+                <div id="cart-items" class="dentrocart"></div>
+
+                <p class="bold">Total: <span id="cart-total">0.00</span></p>
+
+                <button class="finalizar" id="checkout-btn">Finalizar Pedido</button>
+            </div>
+
+            <div class="overlay-menu-cell" id="ov"></div>
         </div> <!--fim interface-->
 
 
@@ -103,7 +117,7 @@
         </div>
     </section><!--Logo Grande-->
 
-    <section class="vendas">
+    <section class="vendas" id="menuk">
         <div class="interface">
             <div class="flex">
                 <div class="itens">
@@ -112,7 +126,9 @@
                         <h3 class="item-title">💳Vip Black 💳( ATE O WIPE )</h3>
                         <p class="price">R$ 299,99</p>
                     </div>
-                    <a href=""><button>Adicionar ao carrinho</button></a>
+                    <button class="add-to-cart-btn" data-name="💳Vip Black 💳( ATE O WIPE )"
+                    data-price="299.99">Adicionar ao
+                        carrinho</button>
                 </div>
                 <div class="itens">
                     <img src="img/90HkB2vD69RRUV98r51i2czbpDBCh1sMr8aLSycD 1.png" alt="">
@@ -120,7 +136,9 @@
                         <h3 class="item-title">💳Vip Black 💳( ATE O WIPE )</h3>
                         <p class="price">R$ 299,99</p>
                     </div>
-                    <a href=""><button>Adicionar ao carrinho</button></a>
+                    <button class="add-to-cart-btn" data-name="💳Vip Black 💳( ATE O WIPE )"
+                    data-price="299.99">Adicionar ao
+                        carrinho</button>
                 </div>
                 <div class="itens">
                     <img src="img/90HkB2vD69RRUV98r51i2czbpDBCh1sMr8aLSycD 1.png" alt="">
@@ -128,104 +146,37 @@
                         <h3 class="item-title">💳Vip Black 💳( ATE O WIPE )</h3>
                         <p class="price">R$ 299,99</p>
                     </div>
-                    <a href=""><button>Adicionar ao carrinho</button></a>
+                    <button class="add-to-cart-btn" data-name="💳Vip Black 💳( ATE O WIPE )"
+                    data-price="299.99">Adicionar ao
+                        carrinho</button>
                 </div>
-                <div class="itens">
-                    <img src="img/90HkB2vD69RRUV98r51i2czbpDBCh1sMr8aLSycD 1.png" alt="">
-                    <div class="lado">
-                        <h3 class="item-title">💳Vip Black 💳( ATE O WIPE )</h3>
-                        <p class="price">R$ 299,99</p>
-                    </div>
-                    <a href=""><button>Adicionar ao carrinho</button></a>
-                </div>
-                <div class="itens">
-                    <img src="img/90HkB2vD69RRUV98r51i2czbpDBCh1sMr8aLSycD 1.png" alt="">
-                    <div class="lado">
-                        <h3 class="item-title">💳Vip Black 💳( ATE O WIPE )</h3>
-                        <p class="price">R$ 299,99</p>
-                    </div>
-                    <a href=""><button>Adicionar ao carrinho</button></a>
-                </div>
-                <div class="itens">
-                    <img src="img/90HkB2vD69RRUV98r51i2czbpDBCh1sMr8aLSycD 1.png" alt="">
-                    <div class="lado">
-                        <h3 class="item-title">💳Vip Black 💳( ATE O WIPE )</h3>
-                        <p class="price">R$ 299,99</p>
-                    </div>
-                    <a href=""><button>Adicionar ao carrinho</button></a>
-                </div>
-                <div class="itens">
-                    <img src="img/90HkB2vD69RRUV98r51i2czbpDBCh1sMr8aLSycD 1.png" alt="">
-                    <div class="lado">
-                        <h3 class="item-title">💳Vip Black 💳( ATE O WIPE )</h3>
-                        <p class="price">R$ 299,99</p>
-                    </div>
-                    <a href=""><button>Adicionar ao carrinho</button></a>
-                </div>
-                <div class="itens">
-                    <img src="img/90HkB2vD69RRUV98r51i2czbpDBCh1sMr8aLSycD 1.png" alt="">
-                    <div class="lado">
-                        <h3 class="item-title">💳Vip Black 💳( ATE O WIPE )</h3>
-                        <p class="price">R$ 299,99</p>
-                    </div>
-                    <a href=""><button>Adicionar ao carrinho</button></a>
-                </div>
-                <div class="itens">
-                    <img src="img/90HkB2vD69RRUV98r51i2czbpDBCh1sMr8aLSycD 1.png" alt="">
-                    <div class="lado">
-                        <h3 class="item-title">💳Vip Black 💳( ATE O WIPE )</h3>
-                        <p class="price">R$ 299,99</p>
-                    </div>
-                    <a href=""><button>Adicionar ao carrinho</button></a>
-                </div>
-                <div class="itens">
-                    <img src="img/90HkB2vD69RRUV98r51i2czbpDBCh1sMr8aLSycD 1.png" alt="">
-                    <div class="lado">
-                        <h3 class="item-title">💳Vip Black 💳( ATE O WIPE )</h3>
-                        <p class="price">R$ 299,99</p>
-                    </div>
-                    <a href=""><button>Adicionar ao carrinho</button></a>
-                </div>
-                <div class="itens">
-                    <img src="img/90HkB2vD69RRUV98r51i2czbpDBCh1sMr8aLSycD 1.png" alt="">
-                    <div class="lado">
-                        <h3 class="item-title">💳Vip Black 💳( ATE O WIPE )</h3>
-                        <p class="price">R$ 299,99</p>
-                    </div>
-                    <a href=""><button>Adicionar ao carrinho</button></a>
-                </div>
-                <div class="itens">
-                    <img src="img/90HkB2vD69RRUV98r51i2czbpDBCh1sMr8aLSycD 1.png" alt="">
-                    <div class="lado">
-                        <h3 class="item-title">💳Vip Black 💳( ATE O WIPE )</h3>
-                        <p class="price">R$ 299,99</p>
-                    </div>
-                    <a href=""><button>Adicionar ao carrinho</button></a>
-                </div>
+                
             </div>
         </div>
     </section>
 
     <footer>
         <div class="interface">
-          <div class="line-footer">
-            <div class="flex">
-              <div class="logo-footer">
-                <img src="img/logo.png" alt="">
-              </div>
-              <div class="social">
-                <a href="https://discord.com/invite/novajerseyrp"><button><i class="bi bi-discord"></i></button></a>
-                <a href="https://www.instagram.com/novajersey_rp/"><button><i class="bi bi-instagram"></i></button></a>
-              </div>
+            <div class="line-footer">
+                <div class="flex">
+                    <div class="logo-footer">
+                        <img src="img/logo.png" alt="">
+                    </div>
+                    <div class="social">
+                        <a href="https://discord.com/invite/novajerseyrp"><button><i
+                                    class="bi bi-discord"></i></button></a>
+                        <a href="https://www.instagram.com/novajersey_rp/"><button><i
+                                    class="bi bi-instagram"></i></button></a>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="line-footer borda">
-            <p><i class="bi bi-envelope-fill"></i> <a
-                href="mailto:lodileonardo123@gmail.com">lodileonardo123@gmail.com</a>
-            </p>
-          </div>
+            <div class="line-footer borda">
+                <p><i class="bi bi-envelope-fill"></i> <a
+                        href="mailto:lodileonardo123@gmail.com">lodileonardo123@gmail.com</a>
+                </p>
+            </div>
         </div>
-      </footer>
+    </footer>
 
 
 
